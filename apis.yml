@@ -1,7 +1,16 @@
 aid: adc-therapeutics
 name: ADC Therapeutics
-description: 'ADC Therapeutics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'ADC Therapeutics SA (NYSE: ADCT) is a commercial-stage biotechnology
+  company headquartered at the Biopôle in Lausanne, Switzerland, with US operations
+  in New Jersey, that discovers and develops antibody drug conjugates (ADCs) for
+  hematologic malignancies and solid tumors. Its approved product ZYNLONTA
+  (loncastuximab tesirine-lpyl) is a CD19-directed ADC for relapsed or refractory
+  diffuse large B-cell lymphoma, and the company is expanding it into earlier lines
+  through the LOTIS-5 Phase 3 and LOTIS-7 Phase 1b trials alongside a preclinical
+  and clinical ADC pipeline. It is a therapeutics developer, not a software vendor:
+  a 2026-09-07 probe of every host it operates found no developer portal, no public
+  API, no SDK and no machine-readable contract.'
+image: https://www.adctherapeutics.com/wp-content/uploads/2026/03/adc-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/adc-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,39 @@ created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Oncology
+- Life Sciences
+- Healthcare
+- Clinical Trials
+- Antibody Drug Conjugates
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    ADC Therapeutics is an oncology drug developer whose product is ZYNLONTA, not
+    software: its WordPress corporate site serves no /developers, /api or /llms.txt
+    path, its Q4-hosted investor site answers every unknown path with a 200 HTML
+    soft-404, no npm/PyPI package carries its name, and no /.well-known/ discovery
+    document exists on any of its five hosts.
+  evidence:
+  - url: https://www.adctherapeutics.com/developers
+    status: 404
+  - url: https://www.adctherapeutics.com/openapi.json
+    status: 404
+  - url: https://www.adctherapeutics.com/llms.txt
+    status: 404
+  - url: https://www.adctherapeutics.com/.well-known/agent-card.json
+    status: 404
+  - url: https://api.github.com/orgs/adctherapeutics
+    status: 404
+  checked: '2026-09-07'
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +61,21 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adc-therapeutics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/adc-therapeutics_stock/
+  url: https://www.adctherapeutics.com/
+- type: PrivacyPolicy
+  url: https://www.adctherapeutics.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.adctherapeutics.com/legal-notice/
+- type: Contact
+  url: https://www.adctherapeutics.com/about-adc-therapeutics/contact/
+- type: InvestorRelations
+  url: https://ir.adctherapeutics.com/overview
+- type: Careers
+  url: https://www.adctherapeutics.com/culture-careers/culture/
+- type: About
+  url: https://www.adctherapeutics.com/about-adc-therapeutics/leadership/
+- type: LLMsTxt
+  url: llms/adc-therapeutics-llms.txt
